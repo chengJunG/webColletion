@@ -11,7 +11,11 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;  
   
 public class FreemarkerUtil {  
-      
+    /**
+     * get template by name  
+     * @param name
+     * @return
+     */
     public Template getTemplate(String name) {  
         try {  
             //通过Freemaker的Configuration读取相应的ftl  
