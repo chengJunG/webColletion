@@ -1,4 +1,4 @@
-package com.cheng.freemarker;
+package com.cheng.freemarker.model;
 
 import java.io.Serializable;
 

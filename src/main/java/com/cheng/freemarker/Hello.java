@@ -14,9 +14,9 @@ public class Hello extends HttpServlet {
 		// 初始化FreeMarker配置
 		// 创建一个Configuration实例
 		cfg = new Configuration();
-		// 设置FreeMarker的模版文件位置
-		cfg.setServletContextForTemplateLoading(getServletContext(),
-				"templates");
+		// 设置FreeMarker的模版文件位置,web使用这种方式来加载模板文件
+		cfg.setServletContextForTemplateLoading(getServletContext(),"templates");
+		//cfg.setDefaultEncoding("GBK");
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,7 +30,7 @@ public class Hello extends HttpServlet {
 		// 开始准备生成输出
 		// 使用模版文件的charset作为本页面的charset
 		// 使用text/html MIME-type
-		response.setContentType("text/html; charset=" + t.getEncoding());
+		response.setContentType("text/html; charset = " + t.getEncoding());
 		PrintWriter out = response.getWriter();
 
 		// 合并数据模型和模版，并将结果输出到out中

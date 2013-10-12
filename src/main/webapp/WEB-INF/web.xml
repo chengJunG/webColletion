@@ -5,12 +5,60 @@
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
 	
+	<context-param>
+		<param-name>email</param-name>
+		<param-value>cheng294656098@gmail.com</param-value>
+	</context-param>
+
+	<!-- servlet -->
+	<!-- common test start -->
 	<servlet>
 		<servlet-name>Hello</servlet-name>
 		<servlet-class>com.cheng.freemarker.Hello</servlet-class>
 	</servlet>
+	<!-- common test end -->
+
+	<!-- freemark project start -->
+	<servlet>
+		<servlet-name>testServletContext</servlet-name>
+		<servlet-class>com.cheng.test.TestServletContext</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Hello1</servlet-name>
+		<display-name>Hello1</display-name>
+		<description></description>
+		<servlet-class>com.cheng.freemarker.Hello1</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>URLlist</servlet-name>
+		<display-name>URLlist</display-name>
+		<description></description>
+		<servlet-class>com.cheng.freemarker.URLlist</servlet-class>
+	</servlet>
+	<!-- freemark project end -->
+
+	<!-- common test start -->
 	<servlet-mapping>
 		<servlet-name>Hello</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>/hello.do</url-pattern>
 	</servlet-mapping>
+	<!-- common test end -->
+
+	<!-- freemark project start -->
+	<servlet-mapping>
+		<servlet-name>testServletContext</servlet-name>
+		<url-pattern>/testServletContext.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Hello1</servlet-name>
+		<url-pattern>/hello1.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>URLlist</servlet-name>
+		<url-pattern>/URLlist</url-pattern>
+	</servlet-mapping>
+
+	<!-- freemark project end -->
+	<!-- servlet -->
+
 </web-app>

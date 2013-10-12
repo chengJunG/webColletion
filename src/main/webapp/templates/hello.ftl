@@ -3,6 +3,6 @@
 <title>hello!</title>
 </head>
 <body>
-<h1>hello ${user}!</h1>
+<h1>你好 ${user}!</h1>
 </body>
 </html>
